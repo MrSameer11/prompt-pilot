@@ -17,7 +17,7 @@ function App() {
 
     try {
       // 2. Axios backend (Node/Express) request send
-      const response = await axios.post('http://localhost:5000/api/improve-prompt', {
+      const response = await axios.post('https://prompt-pilot-yft9.onrender.com', {
         prompt: promptText,
         category: category
       });
