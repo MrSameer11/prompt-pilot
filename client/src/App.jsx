@@ -1,3 +1,4 @@
+import ReactMarkdown from 'react-markdown';
 import { useState } from 'react';
 import axios from 'axios';
 import { Sparkles, Plus, MessageSquare, Terminal, User } from 'lucide-react';
@@ -117,12 +118,12 @@ function App() {
                         : 'bg-white/[0.05] border border-white/10 text-slate-200 rounded-tl-sm whitespace-pre-wrap'
                     } ${msg.isError ? 'border-red-500 text-red-400' : ''}`}>
                       
-                      {msg.category && (
-                        <span className="text-xs font-bold uppercase opacity-60 block mb-1">Category: {msg.category}</span>
-                      )}
-                      
-                      {msg.text}
-                    </div>
+                  {msg.category && (
+                         <span className="text-xs font-bold uppercase opacity-60 block mb-1">Category: {msg.category}</span>
+                    )}
+  
+                          <ReactMarkdown>{msg.text}</ReactMarkdown>
+                      </div>
 
                     {msg.role === 'user' && (
                       <div className="w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center shrink-0 mt-1">
