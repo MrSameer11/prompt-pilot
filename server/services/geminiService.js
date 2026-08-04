@@ -4,7 +4,7 @@ const improvePromptWithAI = async (userPrompt, category) => {
     try {
         const apiKey = process.env.GEMINI_API_KEY; 
         
-        // 🚀 Google Gemini 1.5 Flash - Sabse Fast aur Free Model
+        // 🚀 Google Gemini 1.5 Flash -
         const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${apiKey}`;
             const systemPrompt = `
         You are an Expert Prompt Engineer. Your job is to improve the user's prompt for AI tools.
@@ -41,12 +41,12 @@ const improvePromptWithAI = async (userPrompt, category) => {
             throw new Error(data.error.message);
         }
 
-        // Gemini API ka data nikalne ka correct raasta
+        // Gemini API 
         return data.candidates[0].content.parts[0].text;
 
     } catch (error) {
         console.error("Backend Catch Error:", error.message);
-        throw new Error("AI se connect karne mein problem aayi.");
+        throw new Error("There was a problem connecting to the AI .");
     }
 };
 

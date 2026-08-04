@@ -23,7 +23,7 @@ const improvePrompt = async (req, res) => {
 
     } catch (error) {
         console.error("Controller Error:", error);
-        res.status(500).json({ error: "Server mein kuch gadbad ho gayi." });
+        res.status(500).json({ error: "Something went wrong with the server." });
     }
 };
 

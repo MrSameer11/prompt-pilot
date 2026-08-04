@@ -40,7 +40,7 @@ const PromptForm = ({ onSubmit, isLoading }) => {
           name="prompt"
           value={prompt}
           onChange={(e) => setPrompt(e.target.value)}
-          placeholder="Apna basic prompt yahan type karo..."
+          placeholder="Type your basic prompt here..."
           className="flex-1 bg-white/3 text-slate-100 border border-white/10 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-purple-500 resize-none min-h-12.5 max-h-37.5"
           rows="2"
         />
